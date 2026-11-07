@@ -9,7 +9,7 @@ terraform {
 
 provider "docker" {}
 resource "docker_image" "class_api" {
-  name         = "bubbaj/class-api-it4200-2024-fall:1.9.0"
+  name         = "bubbaj/it4200-fall-2026:2.49.0"
   keep_locally = true
 }
 resource "docker_container" "class_api" {
@@ -17,7 +17,7 @@ resource "docker_container" "class_api" {
   name  = "terraform-class-api"
 
   ports {
-    internal = 5000
+    internal = 8000
     external = 8000
   }
 }
